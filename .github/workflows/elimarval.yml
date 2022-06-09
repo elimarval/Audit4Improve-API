@@ -1,12 +1,11 @@
 name: Flujo de trabajo para ejecutar los test
 on:  
-issues:
-    types:
-      - reopened
-      - opened
-      - assigned
-  schedule:
-    - cron: '1 23 * * 0-4'
+    workflow_dispatch:
+    issues:
+        types:
+        - reopened
+        - opened
+        - assigned
 jobs:
 
   SintaxCheck:
